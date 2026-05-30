@@ -14,11 +14,11 @@ import { PackageOpen } from "lucide-react";
 export const metadata: Metadata = {
   title: "Katalog Produk",
   description:
-    "Jelajahi koleksi aplikasi premium, merchandise HIMATIFA, dan jasa print di EKraf HIMATIFA.",
+    "Jelajahi koleksi digital services, apparel & merchandise, F&B, dan printing services di EKraf HIMATIFA.",
   openGraph: {
     title: "Katalog Produk | EKraf HIMATIFA",
     description:
-      "Jelajahi koleksi aplikasi premium, merchandise HIMATIFA, dan jasa print.",
+      "Jelajahi koleksi digital services, merchandise, dan layanan lainnya dari Ekraf HIMATIFA.",
   },
 };
 

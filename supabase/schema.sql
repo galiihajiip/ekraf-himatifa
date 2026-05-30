@@ -33,11 +33,13 @@ CREATE TABLE products (
 
 -- ===========================================
 -- Pre-populate Categories
+-- Based on proposal: Digital Services, Apparel & Merchandise, F&B/Danus, Printing Services
 -- ===========================================
 INSERT INTO categories (name, slug) VALUES
-  ('Aplikasi Premium', 'aplikasi-premium'),
-  ('Merchandise HIMATIFA', 'merchandise-himatifa'),
-  ('Jasa Print', 'jasa-print');
+  ('Digital Services', 'digital-services'),
+  ('Apparel & Merchandise', 'apparel-merchandise'),
+  ('F&B / Dana Usaha', 'fnb-danus'),
+  ('Printing Services', 'printing-services');
 
 -- ===========================================
 -- Enable Row Level Security (RLS)
@@ -54,4 +56,22 @@ CREATE POLICY "Allow public read access on categories"
 -- Allow public read access to products
 CREATE POLICY "Allow public read access on products"
   ON products FOR SELECT
+  USING (true);
+
+-- Allow authenticated users to insert products
+CREATE POLICY "Allow authenticated insert on products"
+  ON products FOR INSERT
+  TO authenticated
+  WITH CHECK (true);
+
+-- Allow authenticated users to update products
+CREATE POLICY "Allow authenticated update on products"
+  ON products FOR UPDATE
+  TO authenticated
+  USING (true);
+
+-- Allow authenticated users to delete products
+CREATE POLICY "Allow authenticated delete on products"
+  ON products FOR DELETE
+  TO authenticated
   USING (true);

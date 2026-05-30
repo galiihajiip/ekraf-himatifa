@@ -11,9 +11,10 @@ import { createClient } from "@/lib/supabase/server";
 import DeleteProductButton from "@/components/admin/DeleteProductButton";
 
 const categoryLabels: Record<string, string> = {
-  "aplikasi-premium": "Aplikasi Premium",
-  "merchandise-himatifa": "Merchandise",
-  "jasa-print": "Jasa Print",
+  "digital-services": "Digital Services",
+  "apparel-merchandise": "Apparel & Merchandise",
+  "fnb-danus": "F&B / Danus",
+  "printing-services": "Printing Services",
 };
 
 function formatPrice(price: number): string {

@@ -11,9 +11,10 @@ import Link from "next/link";
 
 const categories = [
   { label: "Semua", slug: "" },
-  { label: "Aplikasi Premium", slug: "aplikasi-premium" },
-  { label: "Merchandise HIMATIFA", slug: "merchandise-himatifa" },
-  { label: "Jasa Print", slug: "jasa-print" },
+  { label: "Digital Services", slug: "digital-services" },
+  { label: "Apparel & Merchandise", slug: "apparel-merchandise" },
+  { label: "F&B / Danus", slug: "fnb-danus" },
+  { label: "Printing Services", slug: "printing-services" },
 ];
 
 interface CategoryTabsProps {

@@ -2,7 +2,7 @@
  * MkuBanner Component
  *
  * Academic narrative section explaining the project context.
- * Displays the MKU Kepemimpinan final project information.
+ * Displays the MKU Kepemimpinan project information per proposal.
  */
 
 import { Shield } from "lucide-react";
@@ -22,33 +22,46 @@ export default function MkuBanner() {
           </div>
 
           {/* Title */}
-          <h2 className="text-xl font-bold text-navy sm:text-2xl lg:text-3xl">
-            Klik Bijak, Klik Aman: Mewujudkan Generasi Tangguh Digital
+          <h2 className="text-lg font-bold text-navy sm:text-xl lg:text-2xl">
+            Digitalisasi Layanan Penjualan dan Katalogisasi Terpadu Departemen
+            Ekonomi Kreatif (Ekraf) HIMATIFA
           </h2>
 
           {/* Supervision Info */}
-          <p className="mt-3 text-sm text-gray-500 sm:text-base">
-            Proyek Akhir MKU Kepemimpinan — Kelas G429
+          <p className="mt-4 text-sm text-gray-500 sm:text-base">
+            Project Kepemimpinan — Kelompok 1, Kelas G415
           </p>
           <p className="mt-1 text-sm text-gray-500">
-            Di bawah bimbingan{" "}
+            Dosen Pengampu:{" "}
             <span className="font-medium text-navy">
-              Dr. Ir. Indra Tjahaja Amir, M.P.
+              Ir. Bambang Wahyudi M.S.
             </span>
           </p>
+
+          {/* Team Members */}
+          <div className="mt-4 flex flex-wrap justify-center gap-x-4 gap-y-1 text-xs text-gray-400 sm:text-sm">
+            <span>Daffa Najwan Fadhilah</span>
+            <span>Fidelia Hahas Asabela</span>
+            <span>Galih Aji Pangestu</span>
+            <span>Evrillia Kurniawati</span>
+          </div>
 
           {/* Description */}
           <div className="mt-6 space-y-3 text-sm leading-relaxed text-gray-600 sm:text-base">
             <p>
-              Inisiatif ini hadir sebagai upaya nyata dalam mendorong literasi
-              digital di kalangan mahasiswa. Melalui layanan digital yang
-              praktis, kami membangun kesadaran akan pentingnya keamanan siber
-              dalam aktivitas sehari-hari.
+              Platform ini hadir sebagai solusi atas pengelolaan transaksi dan
+              promosi Departemen Ekraf yang masih berjalan secara konvensional
+              dan terfragmentasi melalui pesan instan. Dengan website e-commerce
+              terintegrasi, seluruh lini bisnis Ekraf — mulai dari layanan
+              digital, merchandise, hingga jasa print — tersentralisasi dalam
+              satu platform yang mudah diakses.
             </p>
             <p>
-              Dengan mengedepankan prinsip transaksi yang aman dan transparan,
-              platform ini menjadi wadah edukasi sekaligus praktik langsung
-              dalam mewujudkan budaya digital yang sehat dan bertanggung jawab.
+              Transformasi digital ini bertujuan memangkas alur birokrasi
+              pemesanan, meminimalisir kesalahan pencatatan manual, serta
+              merepresentasikan kompetensi mahasiswa Informatika dalam
+              menerapkan ilmu teknologi ke penyelesaian masalah nyata di
+              organisasinya.
             </p>
           </div>
         </div>

@@ -24,9 +24,10 @@ async function getStats() {
 }
 
 const categoryLabels: Record<string, string> = {
-  "aplikasi-premium": "Aplikasi Premium",
-  "merchandise-himatifa": "Merchandise HIMATIFA",
-  "jasa-print": "Jasa Print",
+  "digital-services": "Digital Services",
+  "apparel-merchandise": "Apparel & Merchandise",
+  "fnb-danus": "F&B / Dana Usaha",
+  "printing-services": "Printing Services",
 };
 
 export default async function AdminDashboardPage() {

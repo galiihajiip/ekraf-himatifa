@@ -1,8 +1,18 @@
-# EKraf HIMATIFA — Toko Digital & Merchandise
+# EKraf HIMATIFA — E-Commerce Terpadu
 
-Platform e-commerce resmi Departemen Ekonomi Kreatif HIMATIFA UPN "Veteran" Jawa Timur. Menyediakan aplikasi premium, merchandise eksklusif, dan jasa print.
+**Digitalisasi Layanan Penjualan dan Katalogisasi Terpadu Departemen Ekonomi Kreatif (Ekraf) HIMATIFA Melalui Pengembangan Website E-Commerce Terintegrasi**
 
-Proyek ini merupakan bagian dari tugas akhir MKU Kepemimpinan Kelas G429 dengan tema **"Klik Bijak, Klik Aman: Mewujudkan Generasi Tangguh Digital"** di bawah bimbingan Dr. Ir. Indra Tjahaja Amir, M.P.
+Platform e-commerce terpadu untuk Departemen Ekonomi Kreatif HIMATIFA UPN "Veteran" Jawa Timur. Menyediakan layanan digital (aplikasi premium), apparel & merchandise, F&B / dana usaha, dan printing services dalam satu platform tersentralisasi.
+
+## Project Kepemimpinan
+
+- **Mata Kuliah:** MKU Kepemimpinan — Kelas G415
+- **Dosen Pengampu:** Ir. Bambang Wahyudi M.S.
+- **Kelompok 1:**
+  - Daffa Najwan Fadhilah (24081010172)
+  - Fidelia Hahas Asabela (24081010113)
+  - Galih Aji Pangestu (24081010123)
+  - Evrillia Kurniawati (24081010141)
 
 ## Tech Stack
 
@@ -15,11 +25,11 @@ Proyek ini merupakan bagian dari tugas akhir MKU Kepemimpinan Kelas G429 dengan 
 
 ## Features
 
-- Responsive homepage with hero banner, MKU narrative, and category grid
-- Product catalog with category filtering
+- Responsive homepage with hero banner, project narrative, and category grid
+- Product catalog with dynamic category filtering (Digital Services, Apparel & Merchandise, F&B/Danus, Printing Services)
 - Product detail pages with SEO metadata
 - Shopping cart with localStorage persistence
-- WhatsApp checkout with pre-filled order message
+- WhatsApp checkout with auto-filled order message format
 - Admin panel with Supabase Auth protection
 - Full product CRUD (create, read, update, delete)
 - Image upload to Supabase Storage
@@ -43,7 +53,7 @@ npm install
 
 ### 3. Configure environment variables
 
-Copy `.env.local.example` or create `.env.local`:
+Create `.env.local` in the project root:
 
 ```env
 NEXT_PUBLIC_SUPABASE_URL=your-supabase-project-url
@@ -56,7 +66,7 @@ Get your Supabase URL and anon key from:
 
 ### 4. Run Supabase SQL schema
 
-Go to **Supabase Dashboard → SQL Editor** and run the contents of `supabase/schema.sql`. This creates the `products` and `categories` tables with pre-populated category data.
+Go to **Supabase Dashboard → SQL Editor** and run the contents of `supabase/schema.sql`. This creates the `products` and `categories` tables with pre-populated category data (Digital Services, Apparel & Merchandise, F&B / Dana Usaha, Printing Services).
 
 ### 5. Create Supabase Storage bucket
 
@@ -137,4 +147,4 @@ Click **"Deploy"** — Vercel will build and deploy automatically.
 
 ## License
 
-This project is for educational purposes as part of the MKU Kepemimpinan course at UPN "Veteran" Jawa Timur.
+Project ini dibuat untuk keperluan akademis sebagai tugas Project Kepemimpinan di Universitas Pembangunan Nasional "Veteran" Jawa Timur.

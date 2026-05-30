@@ -1,30 +1,41 @@
 /**
  * CategoryGrid Component
  *
- * Responsive grid displaying three clickable category cards.
- * Each card links to the product page filtered by category.
+ * Responsive grid displaying clickable category cards.
+ * Categories match the proposal: Digital Services, Apparel & Merchandise,
+ * F&B / Danus, and Printing Services.
  */
 
 import Link from "next/link";
-import { Monitor, Shirt, Printer } from "lucide-react";
+import { Monitor, Shirt, Coffee, Printer } from "lucide-react";
 
 const categories = [
   {
-    name: "Aplikasi Premium",
-    slug: "aplikasi-premium",
-    description: "Netflix, Spotify, YouTube Premium, dan layanan digital lainnya.",
+    name: "Digital Services",
+    slug: "digital-services",
+    description:
+      "Netflix, Spotify, YouTube Premium, dan layanan aplikasi prabayar lainnya.",
     icon: Monitor,
   },
   {
-    name: "Merchandise HIMATIFA",
-    slug: "merchandise-himatifa",
-    description: "Ospek Kit, Hampers, Jaket, dan merchandise eksklusif lainnya.",
+    name: "Apparel & Merchandise",
+    slug: "apparel-merchandise",
+    description:
+      "Jaket himpunan, merchandise maba, ospek kit, hampers, dan desain eksklusif.",
     icon: Shirt,
   },
   {
-    name: "Jasa Print",
-    slug: "jasa-print",
-    description: "Cetak dokumen, poster, stiker, dan kebutuhan print lainnya.",
+    name: "F&B / Dana Usaha",
+    slug: "fnb-danus",
+    description:
+      "Makanan, minuman, dan produk dana usaha untuk mendukung kegiatan himpunan.",
+    icon: Coffee,
+  },
+  {
+    name: "Printing Services",
+    slug: "printing-services",
+    description:
+      "Jasa print dokumen, poster, stiker, materai, dan kebutuhan cetak lainnya.",
     icon: Printer,
   },
 ];
@@ -36,15 +47,15 @@ export default function CategoryGrid() {
         {/* Section Header */}
         <div className="text-center">
           <h2 className="text-2xl font-bold text-navy sm:text-3xl">
-            Kategori Produk
+            Kategori Layanan
           </h2>
           <p className="mt-2 text-sm text-gray-500 sm:text-base">
-            Pilih kategori yang kamu butuhkan
+            Pilih kategori produk atau layanan yang kamu butuhkan
           </p>
         </div>
 
         {/* Grid */}
-        <div className="mt-8 grid grid-cols-1 gap-4 sm:mt-10 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
+        <div className="mt-8 grid grid-cols-1 gap-4 sm:mt-10 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4">
           {categories.map((cat) => {
             const Icon = cat.icon;
             return (

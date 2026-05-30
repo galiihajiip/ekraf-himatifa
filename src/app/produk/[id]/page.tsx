@@ -54,9 +54,10 @@ function formatPrice(price: number): string {
 /** Map category slug to display label */
 function getCategoryLabel(slug: string): string {
   const map: Record<string, string> = {
-    "aplikasi-premium": "Aplikasi Premium",
-    "merchandise-himatifa": "Merchandise HIMATIFA",
-    "jasa-print": "Jasa Print",
+    "digital-services": "Digital Services",
+    "apparel-merchandise": "Apparel & Merchandise",
+    "fnb-danus": "F&B / Dana Usaha",
+    "printing-services": "Printing Services",
   };
   return map[slug] ?? slug;
 }
