@@ -1,39 +1,76 @@
 /**
  * HeroBanner Component
  *
- * Full-width hero section with gold/yellow primary background.
+ * Dark navy hero with 3D floating shapes as background ornament.
+ * Clean, modern look with gold accents.
  */
 
+import dynamic from "next/dynamic";
 import Link from "next/link";
+
+const HeroScene = dynamic(() => import("./HeroScene"), {
+  ssr: false,
+  loading: () => null,
+});
 
 export default function HeroBanner() {
   return (
-    <section className="relative overflow-hidden bg-gold">
-      {/* Decorative elements */}
-      <div className="absolute inset-0 bg-gradient-to-br from-gold via-gold/95 to-yellow-400/80" />
-      <div className="absolute -right-20 -top-20 h-72 w-72 rounded-full bg-white/10 blur-3xl" />
-      <div className="absolute -bottom-20 -left-20 h-72 w-72 rounded-full bg-navy/5 blur-3xl" />
+    <section className="relative min-h-[85vh] overflow-hidden bg-gradient-to-br from-navy via-navy to-[#0f2a45] sm:min-h-[80vh]">
+      {/* 3D Background */}
+      <HeroScene />
 
-      <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-28 lg:px-8 lg:py-36">
+      {/* Gradient overlay for text readability */}
+      <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-transparent to-navy/30" />
+
+      {/* Decorative grid pattern */}
+      <div className="absolute inset-0 opacity-[0.03]" style={{
+        backgroundImage: "radial-gradient(circle, #F5D000 1px, transparent 1px)",
+        backgroundSize: "40px 40px",
+      }} />
+
+      {/* Content */}
+      <div className="relative mx-auto flex min-h-[85vh] max-w-7xl items-center px-4 sm:min-h-[80vh] sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
-          <h1 className="text-3xl font-extrabold tracking-tight text-navy sm:text-4xl lg:text-5xl">
-            Satu Platform untuk Semua{" "}
-            <span className="text-accent-green">Layanan Ekraf</span>
+          {/* Badge */}
+          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-gold/20 bg-gold/10 px-4 py-1.5">
+            <span className="h-2 w-2 rounded-full bg-gold" />
+            <span className="text-xs font-medium text-gold">
+              Ekraf HIMATIFA UPN Veteran Jatim
+            </span>
+          </div>
+
+          <h1 className="text-3xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
+            Satu Platform untuk{" "}
+            <span className="bg-gradient-to-r from-gold to-yellow-300 bg-clip-text text-transparent">
+              Semua Layanan
+            </span>
           </h1>
-          <p className="mt-4 text-base text-navy/70 sm:mt-6 sm:text-lg">
+          <p className="mt-5 text-base leading-relaxed text-gray-300 sm:mt-6 sm:text-lg">
             Aplikasi premium, merchandise eksklusif, dana usaha, hingga jasa
-            print, semua tersedia di satu tempat. Pesan mudah, langsung
-            terhubung ke admin via WhatsApp.
+            print. Pesan mudah, langsung terhubung ke admin via WhatsApp.
           </p>
-          <div className="mt-8 sm:mt-10">
+          <div className="mt-8 flex flex-col items-center gap-4 sm:mt-10 sm:flex-row sm:justify-center">
             <Link
               href="#katalog"
-              className="inline-block rounded-lg bg-navy px-6 py-3 text-sm font-semibold text-white shadow-lg transition-all hover:bg-navy/90 sm:px-8 sm:py-3.5 sm:text-base"
+              className="inline-flex items-center gap-2 rounded-xl bg-gold px-7 py-3.5 text-sm font-bold text-navy shadow-lg shadow-gold/20 transition-all hover:scale-105 hover:shadow-gold/30 sm:text-base"
             >
               Lihat Katalog
             </Link>
+            <Link
+              href="/produk"
+              className="inline-flex items-center gap-2 rounded-xl border border-white/20 px-7 py-3.5 text-sm font-medium text-white transition-all hover:border-white/40 hover:bg-white/5 sm:text-base"
+            >
+              Semua Produk
+            </Link>
           </div>
         </div>
+      </div>
+
+      {/* Bottom wave ornament */}
+      <div className="absolute bottom-0 left-0 right-0">
+        <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full">
+          <path d="M0 80L60 68C120 56 240 32 360 24C480 16 600 24 720 32C840 40 960 48 1080 44C1200 40 1320 24 1380 16L1440 8V80H1380C1320 80 1200 80 1080 80C960 80 840 80 720 80C600 80 480 80 360 80C240 80 120 80 60 80H0Z" fill="white"/>
+        </svg>
       </div>
     </section>
   );
