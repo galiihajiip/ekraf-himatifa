@@ -12,6 +12,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X, ShoppingCart } from "lucide-react";
 import { useCart } from "@/context/CartContext";
 
@@ -31,6 +32,13 @@ export default function Navbar() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo / Department Name */}
           <Link href="/" className="flex items-center gap-2">
+            <Image
+              src="/logo.png"
+              alt="HIMATIFA Logo"
+              width={36}
+              height={36}
+              className="h-9 w-9"
+            />
             <span className="text-lg font-bold text-white sm:text-xl">
               EKraf <span className="text-gold">HIMATIFA</span>
             </span>

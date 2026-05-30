@@ -9,6 +9,7 @@
 
 import { useEffect, useState, ReactNode } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import { LayoutDashboard, Package, LogOut, Menu, X } from "lucide-react";
 import { createClient } from "@/lib/supabase/client";
@@ -66,9 +67,18 @@ export default function AdminShell({ children }: { children: ReactNode }) {
       >
         {/* Sidebar Header */}
         <div className="flex h-16 items-center justify-between px-4">
-          <span className="text-lg font-bold text-white">
-            EKraf <span className="text-gold">Admin</span>
-          </span>
+          <div className="flex items-center gap-2">
+            <Image
+              src="/logo.png"
+              alt="HIMATIFA Logo"
+              width={32}
+              height={32}
+              className="h-8 w-8"
+            />
+            <span className="text-lg font-bold text-white">
+              EKraf <span className="text-gold">Admin</span>
+            </span>
+          </div>
           <button
             onClick={() => setSidebarOpen(false)}
             className="text-gray-300 lg:hidden"

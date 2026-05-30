@@ -5,6 +5,8 @@
  * Fully responsive with Tailwind CSS.
  */
 
+import Image from "next/image";
+
 /** Custom Instagram icon since lucide-react doesn't include brand icons */
 function InstagramIcon({ className }: { className?: string }) {
   return (
@@ -41,14 +43,23 @@ export default function Footer() {
     <footer className="bg-navy text-gray-300">
       <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center gap-6 text-center">
-          {/* Organization Name */}
-          <div>
-            <h3 className="text-lg font-bold text-white sm:text-xl">
-              EKraf <span className="text-gold">HIMATIFA</span>
-            </h3>
-            <p className="mt-1 text-sm text-gray-400">
-              Departemen Ekonomi Kreatif — HIMATIFA UPN &quot;Veteran&quot; Jawa Timur
-            </p>
+          {/* Logo + Organization Name */}
+          <div className="flex flex-col items-center gap-3">
+            <Image
+              src="/logo.png"
+              alt="HIMATIFA Logo"
+              width={56}
+              height={56}
+              className="h-14 w-14"
+            />
+            <div>
+              <h3 className="text-lg font-bold text-white sm:text-xl">
+                EKraf <span className="text-gold">HIMATIFA</span>
+              </h3>
+              <p className="mt-1 text-sm text-gray-400">
+                Departemen Ekonomi Kreatif — HIMATIFA UPN &quot;Veteran&quot; Jawa Timur
+              </p>
+            </div>
           </div>
 
           {/* Instagram Links */}
