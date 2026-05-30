@@ -1,13 +1,12 @@
 /**
  * Footer Component
  *
- * Displays organization info, tagline, Instagram links, and copyright.
- * Fully responsive with Tailwind CSS.
+ * Gold/yellow background matching HIMATIFA branding.
  */
 
 import Image from "next/image";
 
-/** Custom Instagram icon since lucide-react doesn't include brand icons */
+/** Custom Instagram icon */
 function InstagramIcon({ className }: { className?: string }) {
   return (
     <svg

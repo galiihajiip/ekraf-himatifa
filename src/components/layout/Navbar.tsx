@@ -3,11 +3,7 @@
 /**
  * Navbar Component
  *
- * Responsive navigation bar with:
- * - Department name/logo on the left
- * - Navigation links (Home, Produk, Tentang)
- * - Cart icon with dynamic item-count badge (opens CartDrawer)
- * - Mobile hamburger menu with slide-down nav
+ * Responsive navigation bar with yellow (gold) background matching HIMATIFA logo.
  */
 
 import { useState } from "react";
@@ -27,7 +23,7 @@ export default function Navbar() {
   const { itemCount, toggleCart } = useCart();
 
   return (
-    <header className="sticky top-0 z-50 bg-navy shadow-md">
+    <header className="sticky top-0 z-50 bg-gold shadow-md">
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo / Department Name */}
@@ -39,8 +35,8 @@ export default function Navbar() {
               height={36}
               className="h-9 w-9"
             />
-            <span className="text-lg font-bold text-white sm:text-xl">
-              Ekraf <span className="text-gold">HIMATIFA</span>
+            <span className="text-lg font-bold text-navy sm:text-xl">
+              Ekraf <span className="text-accent-green">HIMATIFA</span>
             </span>
           </Link>
 
@@ -50,21 +46,21 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-gray-200 transition-colors hover:text-gold"
+                className="text-sm font-semibold text-navy/80 transition-colors hover:text-navy"
               >
                 {link.label}
               </Link>
             ))}
 
-            {/* Cart Icon — opens drawer */}
+            {/* Cart Icon */}
             <button
               onClick={toggleCart}
               className="relative"
               aria-label="Buka keranjang"
             >
-              <ShoppingCart className="h-5 w-5 text-gray-200 transition-colors hover:text-gold" />
+              <ShoppingCart className="h-5 w-5 text-navy/80 transition-colors hover:text-navy" />
               {itemCount > 0 && (
-                <span className="absolute -right-2 -top-2 flex h-4 w-4 items-center justify-center rounded-full bg-gold text-[10px] font-bold text-navy">
+                <span className="absolute -right-2 -top-2 flex h-4 w-4 items-center justify-center rounded-full bg-accent-red text-[10px] font-bold text-white">
                   {itemCount}
                 </span>
               )}
@@ -78,9 +74,9 @@ export default function Navbar() {
               className="relative"
               aria-label="Buka keranjang"
             >
-              <ShoppingCart className="h-5 w-5 text-gray-200" />
+              <ShoppingCart className="h-5 w-5 text-navy" />
               {itemCount > 0 && (
-                <span className="absolute -right-2 -top-2 flex h-4 w-4 items-center justify-center rounded-full bg-gold text-[10px] font-bold text-navy">
+                <span className="absolute -right-2 -top-2 flex h-4 w-4 items-center justify-center rounded-full bg-accent-red text-[10px] font-bold text-white">
                   {itemCount}
                 </span>
               )}
@@ -88,7 +84,7 @@ export default function Navbar() {
 
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-200 hover:text-gold"
+              className="text-navy hover:text-navy/70"
               aria-label={isOpen ? "Tutup menu" : "Buka menu"}
               aria-expanded={isOpen}
             >
@@ -103,14 +99,14 @@ export default function Navbar() {
 
         {/* Mobile Slide-Down Menu */}
         {isOpen && (
-          <div className="border-t border-white/10 pb-4 md:hidden">
+          <div className="border-t border-navy/10 pb-4 md:hidden">
             <div className="flex flex-col gap-2 pt-3">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
                   onClick={() => setIsOpen(false)}
-                  className="rounded-md px-3 py-2 text-sm font-medium text-gray-200 transition-colors hover:bg-white/10 hover:text-gold"
+                  className="rounded-md px-3 py-2 text-sm font-semibold text-navy/80 transition-colors hover:bg-navy/10 hover:text-navy"
                 >
                   {link.label}
                 </Link>
