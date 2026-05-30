@@ -6,7 +6,7 @@
  * Responsive navigation bar with:
  * - Department name/logo on the left
  * - Navigation links (Home, Produk, Tentang)
- * - Cart icon with dynamic item-count badge
+ * - Cart icon with dynamic item-count badge (opens CartDrawer)
  * - Mobile hamburger menu with slide-down nav
  */
 
@@ -23,7 +23,7 @@ const navLinks = [
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const { itemCount } = useCart();
+  const { itemCount, toggleCart } = useCart();
 
   return (
     <header className="sticky top-0 z-50 bg-navy shadow-md">
@@ -48,27 +48,35 @@ export default function Navbar() {
               </Link>
             ))}
 
-            {/* Cart Icon */}
-            <Link href="/cart" className="relative">
+            {/* Cart Icon — opens drawer */}
+            <button
+              onClick={toggleCart}
+              className="relative"
+              aria-label="Buka keranjang"
+            >
               <ShoppingCart className="h-5 w-5 text-gray-200 transition-colors hover:text-gold" />
               {itemCount > 0 && (
                 <span className="absolute -right-2 -top-2 flex h-4 w-4 items-center justify-center rounded-full bg-gold text-[10px] font-bold text-navy">
                   {itemCount}
                 </span>
               )}
-            </Link>
+            </button>
           </div>
 
           {/* Mobile: Cart + Hamburger */}
           <div className="flex items-center gap-4 md:hidden">
-            <Link href="/cart" className="relative">
+            <button
+              onClick={toggleCart}
+              className="relative"
+              aria-label="Buka keranjang"
+            >
               <ShoppingCart className="h-5 w-5 text-gray-200" />
               {itemCount > 0 && (
                 <span className="absolute -right-2 -top-2 flex h-4 w-4 items-center justify-center rounded-full bg-gold text-[10px] font-bold text-navy">
                   {itemCount}
                 </span>
               )}
-            </Link>
+            </button>
 
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -76,7 +84,11 @@ export default function Navbar() {
               aria-label={isOpen ? "Tutup menu" : "Buka menu"}
               aria-expanded={isOpen}
             >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
             </button>
           </div>
         </div>
