@@ -68,9 +68,17 @@ export default function Footer() {
           </div>
 
           {/* Copyright */}
-          <p className="text-xs text-gray-500">
-            &copy; {new Date().getFullYear()} EKraf HIMATIFA. All rights reserved.
-          </p>
+          <div className="flex items-center gap-3">
+            <p className="text-xs text-gray-500">
+              &copy; {new Date().getFullYear()} EKraf HIMATIFA. All rights reserved.
+            </p>
+            <a
+              href="/admin/login"
+              className="text-xs text-gray-600 transition-colors hover:text-gold"
+            >
+              Admin
+            </a>
+          </div>
         </div>
       </div>
     </footer>
