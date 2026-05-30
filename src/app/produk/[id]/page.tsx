@@ -30,12 +30,12 @@ export async function generateMetadata({
     title: product.name,
     description:
       product.description ??
-      `Beli ${product.name} di EKraf HIMATIFA dengan harga terjangkau.`,
+      `Beli ${product.name} di Ekraf HIMATIFA dengan harga terjangkau.`,
     openGraph: {
-      title: `${product.name} | EKraf HIMATIFA`,
+      title: `${product.name} | Ekraf HIMATIFA`,
       description:
         product.description ??
-        `Beli ${product.name} di EKraf HIMATIFA.`,
+        `Beli ${product.name} di Ekraf HIMATIFA.`,
       images: product.image_url ? [product.image_url] : undefined,
     },
   };

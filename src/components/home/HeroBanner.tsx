@@ -23,7 +23,7 @@ export default function HeroBanner() {
           </h1>
           <p className="mt-4 text-base text-gray-300 sm:mt-6 sm:text-lg">
             Aplikasi premium, merchandise eksklusif, dana usaha, hingga jasa
-            print — semua tersedia di satu tempat. Pesan mudah, langsung
+            print, semua tersedia di satu tempat. Pesan mudah, langsung
             terhubung ke admin via WhatsApp.
           </p>
           <div className="mt-8 sm:mt-10">

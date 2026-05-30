@@ -10,16 +10,16 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
-    default: "EKraf HIMATIFA — E-Commerce Terpadu",
-    template: "%s | EKraf HIMATIFA",
+    default: "Ekraf HIMATIFA | E-Commerce Terpadu",
+    template: "%s | Ekraf HIMATIFA",
   },
   description:
     "Platform e-commerce terpadu Departemen Ekonomi Kreatif HIMATIFA UPN Veteran Jawa Timur. Digital services, merchandise, F&B, dan printing services.",
   openGraph: {
-    title: "EKraf HIMATIFA — E-Commerce Terpadu",
+    title: "Ekraf HIMATIFA | E-Commerce Terpadu",
     description:
       "Platform e-commerce terpadu Departemen Ekonomi Kreatif HIMATIFA UPN Veteran Jawa Timur.",
-    siteName: "EKraf HIMATIFA",
+    siteName: "Ekraf HIMATIFA",
     locale: "id_ID",
     type: "website",
   },

@@ -40,7 +40,7 @@ export default function Navbar() {
               className="h-9 w-9"
             />
             <span className="text-lg font-bold text-white sm:text-xl">
-              EKraf <span className="text-gold">HIMATIFA</span>
+              Ekraf <span className="text-gold">HIMATIFA</span>
             </span>
           </Link>
 

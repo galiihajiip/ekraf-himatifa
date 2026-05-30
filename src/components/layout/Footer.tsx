@@ -54,10 +54,10 @@ export default function Footer() {
             />
             <div>
               <h3 className="text-lg font-bold text-white sm:text-xl">
-                EKraf <span className="text-gold">HIMATIFA</span>
+                Ekraf <span className="text-gold">HIMATIFA</span>
               </h3>
               <p className="mt-1 text-sm text-gray-400">
-                Departemen Ekonomi Kreatif — HIMATIFA UPN &quot;Veteran&quot; Jawa Timur
+                Departemen Ekonomi Kreatif HIMATIFA UPN &quot;Veteran&quot; Jawa Timur
               </p>
             </div>
           </div>
@@ -81,7 +81,7 @@ export default function Footer() {
           {/* Copyright */}
           <div className="flex items-center gap-3">
             <p className="text-xs text-gray-500">
-              &copy; {new Date().getFullYear()} EKraf HIMATIFA. All rights reserved.
+              &copy; {new Date().getFullYear()} Ekraf HIMATIFA. All rights reserved.
             </p>
             <a
               href="/admin/login"

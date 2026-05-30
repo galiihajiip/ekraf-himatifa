@@ -37,7 +37,7 @@ export default async function AdminDashboardPage() {
     <div>
       <h1 className="text-2xl font-bold text-navy">Dashboard</h1>
       <p className="mt-2 text-gray-500">
-        Selamat datang di Admin Panel EKraf HIMATIFA.
+        Selamat datang di Admin Panel Ekraf HIMATIFA.
       </p>
 
       <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">

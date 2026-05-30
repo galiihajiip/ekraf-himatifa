@@ -28,7 +28,7 @@ export function generateWhatsAppUrl(
 
   // Build the order message
   const lines: string[] = [
-    "🛒 *PESANAN BARU — EKraf HIMATIFA*",
+    "🛒 *PESANAN BARU | Ekraf HIMATIFA*",
     "",
     "Halo kak, saya ingin memesan:",
     "",

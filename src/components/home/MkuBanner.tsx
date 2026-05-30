@@ -29,7 +29,7 @@ export default function MkuBanner() {
 
           {/* Supervision Info */}
           <p className="mt-4 text-sm text-gray-500 sm:text-base">
-            Project Kepemimpinan — Kelompok 1, Kelas G415
+            Project Kepemimpinan | Kelompok 1, Kelas G415
           </p>
           <p className="mt-1 text-sm text-gray-500">
             Dosen Pengampu:{" "}
@@ -52,8 +52,7 @@ export default function MkuBanner() {
               Platform ini hadir sebagai solusi atas pengelolaan transaksi dan
               promosi Departemen Ekraf yang masih berjalan secara konvensional
               dan terfragmentasi melalui pesan instan. Dengan website e-commerce
-              terintegrasi, seluruh lini bisnis Ekraf — mulai dari layanan
-              digital, merchandise, hingga jasa print — tersentralisasi dalam
+              terintegrasi, seluruh lini bisnis Ekraf tersentralisasi dalam
               satu platform yang mudah diakses.
             </p>
             <p>

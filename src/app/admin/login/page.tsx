@@ -52,7 +52,7 @@ export default function AdminLoginPage() {
         <div className="mb-8 text-center">
           <h1 className="text-2xl font-bold text-navy">Admin Panel</h1>
           <p className="mt-1 text-sm text-gray-500">
-            EKraf HIMATIFA — Login untuk mengelola produk
+            Ekraf HIMATIFA | Login untuk mengelola produk
           </p>
         </div>
 

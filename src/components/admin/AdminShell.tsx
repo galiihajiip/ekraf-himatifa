@@ -76,7 +76,7 @@ export default function AdminShell({ children }: { children: ReactNode }) {
               className="h-8 w-8"
             />
             <span className="text-lg font-bold text-white">
-              EKraf <span className="text-gold">Admin</span>
+              Ekraf <span className="text-gold">Admin</span>
             </span>
           </div>
           <button
