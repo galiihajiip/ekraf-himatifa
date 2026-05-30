@@ -5,6 +5,7 @@
  * The "Tambah ke Keranjang" button is a client component.
  */
 
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
@@ -14,6 +15,30 @@ import AddToCartButton from "./AddToCartButton";
 
 interface ProductDetailPageProps {
   params: { id: string };
+}
+
+export async function generateMetadata({
+  params,
+}: ProductDetailPageProps): Promise<Metadata> {
+  const product = await getProductById(params.id);
+
+  if (!product) {
+    return { title: "Produk Tidak Ditemukan" };
+  }
+
+  return {
+    title: product.name,
+    description:
+      product.description ??
+      `Beli ${product.name} di EKraf HIMATIFA dengan harga terjangkau.`,
+    openGraph: {
+      title: `${product.name} | EKraf HIMATIFA`,
+      description:
+        product.description ??
+        `Beli ${product.name} di EKraf HIMATIFA.`,
+      images: product.image_url ? [product.image_url] : undefined,
+    },
+  };
 }
 
 /** Format price to Indonesian Rupiah */

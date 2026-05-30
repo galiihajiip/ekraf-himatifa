@@ -9,9 +9,20 @@ import CartDrawer from "@/components/cart/CartDrawer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "EKraf HIMATIFA — Toko Digital & Merchandise",
+  title: {
+    default: "EKraf HIMATIFA — Toko Digital & Merchandise",
+    template: "%s | EKraf HIMATIFA",
+  },
   description:
-    "E-Commerce Departemen Ekonomi Kreatif HIMATIFA UPN Veteran Jawa Timur",
+    "Platform e-commerce resmi Departemen Ekonomi Kreatif HIMATIFA UPN Veteran Jawa Timur. Jual aplikasi premium, merchandise, dan jasa print.",
+  openGraph: {
+    title: "EKraf HIMATIFA — Toko Digital & Merchandise",
+    description:
+      "Platform e-commerce resmi Departemen Ekonomi Kreatif HIMATIFA UPN Veteran Jawa Timur.",
+    siteName: "EKraf HIMATIFA",
+    locale: "id_ID",
+    type: "website",
+  },
 };
 
 export default function RootLayout({

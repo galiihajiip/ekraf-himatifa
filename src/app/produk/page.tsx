@@ -5,10 +5,22 @@
  * Supports category filtering via URL search params.
  */
 
+import type { Metadata } from "next";
 import { getProducts } from "@/lib/actions/products";
 import ProductCard from "@/components/products/ProductCard";
 import CategoryTabs from "@/components/products/CategoryTabs";
 import { PackageOpen } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Katalog Produk",
+  description:
+    "Jelajahi koleksi aplikasi premium, merchandise HIMATIFA, dan jasa print di EKraf HIMATIFA.",
+  openGraph: {
+    title: "Katalog Produk | EKraf HIMATIFA",
+    description:
+      "Jelajahi koleksi aplikasi premium, merchandise HIMATIFA, dan jasa print.",
+  },
+};
 
 interface ProdukPageProps {
   searchParams: { category?: string };
