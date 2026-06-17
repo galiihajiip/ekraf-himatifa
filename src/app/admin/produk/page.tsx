@@ -7,7 +7,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Plus } from "lucide-react";
-import { createClient } from "@/lib/supabase/server";
+import { getCatalogProducts } from "@/lib/data/catalog";
 import DeleteProductButton from "@/components/admin/DeleteProductButton";
 
 const categoryLabels: Record<string, string> = {
@@ -26,11 +26,7 @@ function formatPrice(price: number): string {
 }
 
 export default async function AdminProductsPage() {
-  const supabase = createClient();
-  const { data: products } = await supabase
-    .from("products")
-    .select("*")
-    .order("created_at", { ascending: false });
+  const products = await getCatalogProducts();
 
   return (
     <div>

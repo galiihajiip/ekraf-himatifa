@@ -4,20 +4,15 @@
  * Shows summary stats: total products and products per category.
  */
 
-import { createClient } from "@/lib/supabase/server";
+import { getCatalogProducts } from "@/lib/data/catalog";
 
 async function getStats() {
-  const supabase = createClient();
-
-  const { data: products } = await supabase
-    .from("products")
-    .select("id, category");
-
-  const total = products?.length ?? 0;
+  const products = await getCatalogProducts();
+  const total = products.length;
 
   const perCategory: Record<string, number> = {};
-  products?.forEach((p) => {
-    perCategory[p.category] = (perCategory[p.category] || 0) + 1;
+  products.forEach((product) => {
+    perCategory[product.category] = (perCategory[product.category] || 0) + 1;
   });
 
   return { total, perCategory };

@@ -3,7 +3,7 @@
  */
 
 import { notFound } from "next/navigation";
-import { createClient } from "@/lib/supabase/server";
+import { getCatalogProductById, getCategories } from "@/lib/data/catalog";
 import ProductForm from "@/components/admin/ProductForm";
 
 interface EditProductPageProps {
@@ -13,11 +13,9 @@ interface EditProductPageProps {
 export default async function EditProductPage({
   params,
 }: EditProductPageProps) {
-  const supabase = createClient();
-
-  const [{ data: product }, { data: categories }] = await Promise.all([
-    supabase.from("products").select("*").eq("id", params.id).single(),
-    supabase.from("categories").select("*").order("name"),
+  const [product, categories] = await Promise.all([
+    getCatalogProductById(params.id),
+    getCategories(),
   ]);
 
   if (!product) {
@@ -32,7 +30,7 @@ export default async function EditProductPage({
       </p>
 
       <div className="mt-6">
-        <ProductForm categories={categories ?? []} product={product} />
+        <ProductForm categories={categories} product={product} />
       </div>
     </div>
   );

@@ -2,15 +2,11 @@
  * Admin — Create New Product Page
  */
 
-import { createClient } from "@/lib/supabase/server";
+import { getCategories } from "@/lib/data/catalog";
 import ProductForm from "@/components/admin/ProductForm";
 
 export default async function NewProductPage() {
-  const supabase = createClient();
-  const { data: categories } = await supabase
-    .from("categories")
-    .select("*")
-    .order("name");
+  const categories = await getCategories();
 
   return (
     <div>
@@ -20,7 +16,7 @@ export default async function NewProductPage() {
       </p>
 
       <div className="mt-6">
-        <ProductForm categories={categories ?? []} />
+        <ProductForm categories={categories} />
       </div>
     </div>
   );
