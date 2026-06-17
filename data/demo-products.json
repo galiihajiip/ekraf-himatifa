@@ -1,0 +1,472 @@
+{
+  "products": [
+    {
+      "id": "demo-prod-001",
+      "name": "Netflix Premium 1 Bulan",
+      "price": 45000,
+      "category": "digital-services",
+      "image_url": "/products/netflix-premium.jpg",
+      "description": "Akun sharing Netflix Premium UHD, garansi penuh 30 hari, support respon cepat.",
+      "created_at": "2026-06-17T17:06:45.994Z"
+    },
+    {
+      "id": "demo-prod-002",
+      "name": "Spotify Premium 1 Bulan",
+      "price": 35000,
+      "category": "digital-services",
+      "image_url": "/products/spotify-premium.jpg",
+      "description": "Spotify Premium individu, tanpa iklan, download offline, garansi 30 hari.",
+      "created_at": "2026-06-17T17:06:44.994Z"
+    },
+    {
+      "id": "demo-prod-003",
+      "name": "YouTube Premium 1 Bulan",
+      "price": 40000,
+      "category": "digital-services",
+      "image_url": "/products/youtube-premium.jpg",
+      "description": "YouTube Premium family slot, bebas iklan + YouTube Music, aktif 30 hari.",
+      "created_at": "2026-06-17T17:06:43.994Z"
+    },
+    {
+      "id": "demo-prod-004",
+      "name": "Disney+ Hotstar 1 Bulan",
+      "price": 35000,
+      "category": "digital-services",
+      "image_url": "/products/disney-hotstar.jpg",
+      "description": "Langganan Disney+ Hotstar sharing, akses film Marvel & Disney, garansi 30 hari.",
+      "created_at": "2026-06-17T17:06:42.994Z"
+    },
+    {
+      "id": "demo-prod-005",
+      "name": "Vidio Platinum 1 Bulan",
+      "price": 30000,
+      "category": "digital-services",
+      "image_url": "/products/vidio-platinum.jpg",
+      "description": "Vidio Platinum untuk streaming lokal & olahraga, slot sharing, 30 hari.",
+      "created_at": "2026-06-17T17:06:41.994Z"
+    },
+    {
+      "id": "demo-prod-006",
+      "name": "Canva Pro 1 Bulan",
+      "price": 25000,
+      "category": "digital-services",
+      "image_url": "/products/canva-pro.jpg",
+      "description": "Canva Pro tim HIMATIFA, template premium & background remover, 30 hari.",
+      "created_at": "2026-06-17T17:06:40.994Z"
+    },
+    {
+      "id": "demo-prod-007",
+      "name": "Microsoft 365 Personal 1 Bulan",
+      "price": 30000,
+      "category": "digital-services",
+      "image_url": "/products/microsoft-365.jpg",
+      "description": "Office 365 lengkap: Word, Excel, PowerPoint, OneDrive 1TB, 30 hari.",
+      "created_at": "2026-06-17T17:06:39.994Z"
+    },
+    {
+      "id": "demo-prod-008",
+      "name": "ChatGPT Plus 1 Bulan",
+      "price": 150000,
+      "category": "digital-services",
+      "image_url": "/products/chatgpt-plus.jpg",
+      "description": "Akun ChatGPT Plus GPT-4, prioritas akses & plugin, untuk kebutuhan akademik.",
+      "created_at": "2026-06-17T17:06:38.994Z"
+    },
+    {
+      "id": "demo-prod-009",
+      "name": "CapCut Pro 1 Bulan",
+      "price": 20000,
+      "category": "digital-services",
+      "image_url": "/products/capcut-pro.jpg",
+      "description": "CapCut Pro untuk editing konten HIMATIFA, efek premium & tanpa watermark.",
+      "created_at": "2026-06-17T17:06:37.994Z"
+    },
+    {
+      "id": "demo-prod-010",
+      "name": "Google One 100GB 1 Bulan",
+      "price": 25000,
+      "category": "digital-services",
+      "image_url": "/products/google-one.jpg",
+      "description": "Google One 100GB family slot, backup foto & dokumen kuliah, 30 hari.",
+      "created_at": "2026-06-17T17:06:36.994Z"
+    },
+    {
+      "id": "demo-prod-011",
+      "name": "Notion Plus 1 Bulan",
+      "price": 15000,
+      "category": "digital-services",
+      "image_url": "/products/notion-plus.jpg",
+      "description": "Notion Plus unlimited blocks & file upload, cocok untuk catatan kuliah.",
+      "created_at": "2026-06-17T17:06:35.994Z"
+    },
+    {
+      "id": "demo-prod-012",
+      "name": "Zoom Pro 1 Bulan",
+      "price": 28000,
+      "category": "digital-services",
+      "image_url": "/products/zoom-pro.jpg",
+      "description": "Zoom Pro meeting tanpa batas 40 menit, untuk webinar & rapat HIMATIFA.",
+      "created_at": "2026-06-17T17:06:34.994Z"
+    },
+    {
+      "id": "demo-prod-013",
+      "name": "Kaos HIMATIFA Official",
+      "price": 85000,
+      "category": "apparel-merchandise",
+      "image_url": "/products/kaos-himatifa.jpg",
+      "description": "Kaos eksklusif HIMATIFA, bahan combed 30s, sablon plastisol premium.",
+      "created_at": "2026-06-17T17:06:33.994Z"
+    },
+    {
+      "id": "demo-prod-014",
+      "name": "Jaket Jurusan Informatika",
+      "price": 250000,
+      "category": "apparel-merchandise",
+      "image_url": "/products/jaket-informatika.jpg",
+      "description": "Jaket hoodie jurusan Informatika, logo IF & HIMATIFA, bahan fleece premium.",
+      "created_at": "2026-06-17T17:06:32.994Z"
+    },
+    {
+      "id": "demo-prod-015",
+      "name": "Hoodie Design Contest Edition",
+      "price": 150000,
+      "category": "apparel-merchandise",
+      "image_url": "/products/hoodie-design-contest.jpg",
+      "description": "Hoodie hasil Design Contest HIMATIFA 2025, edisi terbatas, unisex.",
+      "created_at": "2026-06-17T17:06:31.994Z"
+    },
+    {
+      "id": "demo-prod-016",
+      "name": "Totebag HIMATIFA Canvas",
+      "price": 45000,
+      "category": "apparel-merchandise",
+      "image_url": "/products/totebag-himatifa.jpg",
+      "description": "Totebag kanvas premium sablon HIMATIFA, muat laptop 14 inch.",
+      "created_at": "2026-06-17T17:06:30.994Z"
+    },
+    {
+      "id": "demo-prod-017",
+      "name": "Topi Trucker HIMATIFA",
+      "price": 55000,
+      "category": "apparel-merchandise",
+      "image_url": "/products/topi-himatifa.jpg",
+      "description": "Topi trucker mesh HIMATIFA, adjustable strap, one size.",
+      "created_at": "2026-06-17T17:06:29.994Z"
+    },
+    {
+      "id": "demo-prod-018",
+      "name": "Sticker Pack HIMATIFA (10 pcs)",
+      "price": 15000,
+      "category": "apparel-merchandise",
+      "image_url": "/products/sticker-pack.jpg",
+      "description": "Paket stiker vinyl HIMATIFA waterproof, 10 desain berbeda.",
+      "created_at": "2026-06-17T17:06:28.994Z"
+    },
+    {
+      "id": "demo-prod-019",
+      "name": "Pin Badge Enamel HIMATIFA",
+      "price": 12000,
+      "category": "apparel-merchandise",
+      "image_url": "/products/pin-badge.jpg",
+      "description": "Pin enamel custom logo HIMATIFA, klip butterfly backing.",
+      "created_at": "2026-06-17T17:06:27.994Z"
+    },
+    {
+      "id": "demo-prod-020",
+      "name": "Merch Design Contest Winner 2025",
+      "price": 95000,
+      "category": "apparel-merchandise",
+      "image_url": "/products/merch-contest-winner.jpg",
+      "description": "Paket merch pemenang Design Contest: kaos + pin + stiker limited edition.",
+      "created_at": "2026-06-17T17:06:26.994Z"
+    },
+    {
+      "id": "demo-prod-021",
+      "name": "Lanyard HIMATIFA Custom",
+      "price": 18000,
+      "category": "apparel-merchandise",
+      "image_url": "/products/lanyard-himatifa.jpg",
+      "description": "Lanyard sublim full print HIMATIFA + hook ID card, panjang 90cm.",
+      "created_at": "2026-06-17T17:06:25.994Z"
+    },
+    {
+      "id": "demo-prod-022",
+      "name": "Varsity Jacket Informatika",
+      "price": 320000,
+      "category": "apparel-merchandise",
+      "image_url": "/products/varsity-informatika.jpg",
+      "description": "Jaket varsity Informatika, bahan wool body + kulit lengan, bordir premium.",
+      "created_at": "2026-06-17T17:06:24.994Z"
+    },
+    {
+      "id": "demo-prod-023",
+      "name": "Paket Ospek Kit Lengkap",
+      "price": 175000,
+      "category": "apparel-merchandise",
+      "image_url": "/products/ospek-kit-lengkap.jpg",
+      "description": "Ospek kit lengkap: kaos, celana training, topi, tali ID, dan tas string.",
+      "created_at": "2026-06-17T17:06:23.994Z"
+    },
+    {
+      "id": "demo-prod-024",
+      "name": "Ospek Kit Basic (Kaos + Topi)",
+      "price": 95000,
+      "category": "apparel-merchandise",
+      "image_url": "/products/ospek-kit-basic.jpg",
+      "description": "Paket ospek basic: kaos angkatan + topi ospek sablon HIMATIFA.",
+      "created_at": "2026-06-17T17:06:22.994Z"
+    },
+    {
+      "id": "demo-prod-025",
+      "name": "Kaos Ospek HIMATIFA 2025",
+      "price": 65000,
+      "category": "apparel-merchandise",
+      "image_url": "/products/kaos-ospek.jpg",
+      "description": "Kaos dryfit ospek angkatan baru, sablon nomor peserta & logo HIMATIFA.",
+      "created_at": "2026-06-17T17:06:21.994Z"
+    },
+    {
+      "id": "demo-prod-026",
+      "name": "Hampers Kit Ucapan Lebaran",
+      "price": 200000,
+      "category": "apparel-merchandise",
+      "image_url": "/products/hampers-lebaran.jpg",
+      "description": "Hampers lebaran isi kue kering, teh, dan kartu ucapan custom HIMATIFA.",
+      "created_at": "2026-06-17T17:06:20.994Z"
+    },
+    {
+      "id": "demo-prod-027",
+      "name": "Hampers Snack Premium HIMATIFA",
+      "price": 150000,
+      "category": "apparel-merchandise",
+      "image_url": "/products/hampers-snack.jpg",
+      "description": "Hampers snack premium: keripik, coklat, minuman, dalam box custom logo.",
+      "created_at": "2026-06-17T17:06:19.994Z"
+    },
+    {
+      "id": "demo-prod-028",
+      "name": "Hampers Custom Logo Jurusan",
+      "price": 250000,
+      "category": "apparel-merchandise",
+      "image_url": "/products/hampers-custom.jpg",
+      "description": "Hampers custom isi bebas + box premium sablon logo jurusan/kelas.",
+      "created_at": "2026-06-17T17:06:18.994Z"
+    },
+    {
+      "id": "demo-prod-029",
+      "name": "Hampers Goodie Bag Event",
+      "price": 85000,
+      "category": "apparel-merchandise",
+      "image_url": "/products/hampers-goodie.jpg",
+      "description": "Goodie bag event seminar HIMATIFA: snack, minuman, notes, dan pulpen.",
+      "created_at": "2026-06-17T17:06:17.994Z"
+    },
+    {
+      "id": "demo-prod-030",
+      "name": "Print A4 Hitam Putih (per lembar)",
+      "price": 500,
+      "category": "printing-services",
+      "image_url": "/products/print-a4-bw.jpg",
+      "description": "Print dokumen A4 hitam putih, kertas HVS 80gr, hasil tajam.",
+      "created_at": "2026-06-17T17:06:16.994Z"
+    },
+    {
+      "id": "demo-prod-031",
+      "name": "Print A4 Berwarna (per lembar)",
+      "price": 1500,
+      "category": "printing-services",
+      "image_url": "/products/print-a4-color.jpg",
+      "description": "Print full color A4, cocok untuk poster, presentasi, dan modul kuliah.",
+      "created_at": "2026-06-17T17:06:15.994Z"
+    },
+    {
+      "id": "demo-prod-032",
+      "name": "Print Foto 4R Glossy",
+      "price": 3000,
+      "category": "printing-services",
+      "image_url": "/products/print-foto-4r.jpg",
+      "description": "Cetak foto ukuran 4R kertas glossy premium, warna akurat.",
+      "created_at": "2026-06-17T17:06:14.994Z"
+    },
+    {
+      "id": "demo-prod-033",
+      "name": "Laminating A4",
+      "price": 5000,
+      "category": "printing-services",
+      "image_url": "/products/laminating-a4.jpg",
+      "description": "Laminating dokumen A4 glossy/doff, anti air dan lebih awet.",
+      "created_at": "2026-06-17T17:06:13.994Z"
+    },
+    {
+      "id": "demo-prod-034",
+      "name": "Jilid Skripsi Hardcover",
+      "price": 75000,
+      "category": "printing-services",
+      "image_url": "/products/jilid-skripsi.jpg",
+      "description": "Jilid hardcover skripsi/tugas akhir, cover custom + hot print nama.",
+      "created_at": "2026-06-17T17:06:12.994Z"
+    },
+    {
+      "id": "demo-prod-035",
+      "name": "Banner Spanduk (per m²)",
+      "price": 50000,
+      "category": "printing-services",
+      "image_url": "/products/banner-spanduk.jpg",
+      "description": "Cetak banner spanduk outdoor, tahan cuaca, untuk event kampus.",
+      "created_at": "2026-06-17T17:06:11.994Z"
+    },
+    {
+      "id": "demo-prod-036",
+      "name": "Stiker Vinyl Custom",
+      "price": 25000,
+      "category": "printing-services",
+      "image_url": "/products/stiker-vinyl.jpg",
+      "description": "Stiker vinyl cutting custom desain, waterproof untuk laptop & botol.",
+      "created_at": "2026-06-17T17:06:10.994Z"
+    },
+    {
+      "id": "demo-prod-037",
+      "name": "Fotokopi B/W A4 (per lembar)",
+      "price": 300,
+      "category": "printing-services",
+      "image_url": "/products/fotokopi-bw.jpg",
+      "description": "Fotokopi hitam putih A4, hasil jelas, harga mahasiswa.",
+      "created_at": "2026-06-17T17:06:09.994Z"
+    },
+    {
+      "id": "demo-prod-038",
+      "name": "Materai Elektronik Rp 10.000",
+      "price": 10500,
+      "category": "printing-services",
+      "image_url": "/products/materai-10000.jpg",
+      "description": "Materai elektronik resmi Rp 10.000 untuk dokumen digital & surat.",
+      "created_at": "2026-06-17T17:06:08.994Z"
+    },
+    {
+      "id": "demo-prod-039",
+      "name": "Materai Elektronik Rp 5.000",
+      "price": 5500,
+      "category": "printing-services",
+      "image_url": "/products/materai-5000.jpg",
+      "description": "Materai elektronik resmi Rp 5.000, proses cepat via e-meterai.",
+      "created_at": "2026-06-17T17:06:07.994Z"
+    },
+    {
+      "id": "demo-prod-040",
+      "name": "Materai Tempel Rp 10.000",
+      "price": 11000,
+      "category": "printing-services",
+      "image_url": "/products/materai-tempel.jpg",
+      "description": "Materai tempel fisik Rp 10.000, siap untuk dokumen hardcopy.",
+      "created_at": "2026-06-17T17:06:06.994Z"
+    },
+    {
+      "id": "demo-prod-041",
+      "name": "Nasi Box Ayam Bakar",
+      "price": 15000,
+      "category": "fnb-danus",
+      "image_url": "/products/nasi-box-ayam.jpg",
+      "description": "Nasi box ayam bakar bumbu kecap, lalapan & sambal, fresh setiap hari.",
+      "created_at": "2026-06-17T17:06:05.994Z"
+    },
+    {
+      "id": "demo-prod-042",
+      "name": "Nasi Box Rendang",
+      "price": 18000,
+      "category": "fnb-danus",
+      "image_url": "/products/nasi-box-rendang.jpg",
+      "description": "Nasi box rendang sapi khas, porsi mahasiswa, pedas sedang.",
+      "created_at": "2026-06-17T17:06:04.994Z"
+    },
+    {
+      "id": "demo-prod-043",
+      "name": "Air Mineral 600ml",
+      "price": 3000,
+      "category": "fnb-danus",
+      "image_url": "/products/air-mineral.jpg",
+      "description": "Air mineral botol 600ml dingin, ready stock di kantin IF.",
+      "created_at": "2026-06-17T17:06:03.994Z"
+    },
+    {
+      "id": "demo-prod-044",
+      "name": "Es Teh Manis Gelas",
+      "price": 5000,
+      "category": "fnb-danus",
+      "image_url": "/products/es-teh-manis.jpg",
+      "description": "Es teh manis segar gelas besar, cocok temani belajar.",
+      "created_at": "2026-06-17T17:06:02.994Z"
+    },
+    {
+      "id": "demo-prod-045",
+      "name": "Kopi Good Day Cappuccino",
+      "price": 4000,
+      "category": "fnb-danus",
+      "image_url": "/products/kopi-good-day.jpg",
+      "description": "Kopi siap minum Good Day Cappuccino, dingin & creamy.",
+      "created_at": "2026-06-17T17:06:01.994Z"
+    },
+    {
+      "id": "demo-prod-046",
+      "name": "Snack Mix Keripik & Wafer",
+      "price": 8000,
+      "category": "fnb-danus",
+      "image_url": "/products/snack-mix.jpg",
+      "description": "Paket snack mix keripik usus + wafer coklat, camilan kuliah.",
+      "created_at": "2026-06-17T17:06:00.994Z"
+    },
+    {
+      "id": "demo-prod-047",
+      "name": "Indomie Goreng + Telur",
+      "price": 8000,
+      "category": "fnb-danus",
+      "image_url": "/products/indomie-telur.jpg",
+      "description": "Indomie goreng original + telur ceplok, masak fresh order.",
+      "created_at": "2026-06-17T17:05:59.994Z"
+    },
+    {
+      "id": "demo-prod-048",
+      "name": "Paket Jajanan Ospek (5 item)",
+      "price": 25000,
+      "category": "fnb-danus",
+      "image_url": "/products/paket-jajanan-ospek.jpg",
+      "description": "Paket jajanan ospek: snack, minuman, permen, biskuit, dan coklat.",
+      "created_at": "2026-06-17T17:05:58.994Z"
+    },
+    {
+      "id": "demo-prod-049",
+      "name": "Donat Kampung (3 pcs)",
+      "price": 12000,
+      "category": "fnb-danus",
+      "image_url": "/products/donat-kampung.jpg",
+      "description": "Donat kampung gula halus, 3 pcs, fresh setiap pagi.",
+      "created_at": "2026-06-17T17:05:57.994Z"
+    },
+    {
+      "id": "demo-prod-050",
+      "name": "Pudding Coklat Cup",
+      "price": 6000,
+      "category": "fnb-danus",
+      "image_url": "/products/pudding-coklat.jpg",
+      "description": "Pudding coklat cup dingin, topping coklat chips.",
+      "created_at": "2026-06-17T17:05:56.994Z"
+    },
+    {
+      "id": "demo-prod-051",
+      "name": "Roti Bakar Cokelat",
+      "price": 7000,
+      "category": "fnb-danus",
+      "image_url": "/products/roti-bakar.jpg",
+      "description": "Roti bakar cokelat keju, hangat, cocok untuk sarapan cepat.",
+      "created_at": "2026-06-17T17:05:55.994Z"
+    },
+    {
+      "id": "demo-prod-052",
+      "name": "Minuman Susu UHT Coklat",
+      "price": 4500,
+      "category": "fnb-danus",
+      "image_url": "/products/susu-uht.jpg",
+      "description": "Susu UHT coklat 250ml, dingin, stok kantin dana usaha.",
+      "created_at": "2026-06-17T17:05:54.994Z"
+    }
+  ]
+}
