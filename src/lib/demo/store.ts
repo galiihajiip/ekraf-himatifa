@@ -1,6 +1,7 @@
 import { promises as fs } from "fs";
 import path from "path";
 import type { Product } from "@/lib/actions/products";
+import { BUNDLED_DEMO_PRODUCTS } from "@/lib/demo/bundled-products";
 
 const DATA_DIR = path.join(process.cwd(), "data");
 const DATA_FILE = path.join(DATA_DIR, "demo-products.json");
@@ -9,12 +10,14 @@ async function ensureStore(): Promise<Product[]> {
   try {
     const raw = await fs.readFile(DATA_FILE, "utf-8");
     const parsed = JSON.parse(raw) as { products?: Product[] };
-    return parsed.products ?? [];
+    if (parsed.products?.length) {
+      return parsed.products;
+    }
   } catch {
-    throw new Error(
-      "Demo product data not found. Run `npm run seed:demo` to generate the catalog."
-    );
+    // Fall back to bundled catalog (works on Vercel without writable data/)
   }
+
+  return BUNDLED_DEMO_PRODUCTS;
 }
 
 async function writeProducts(products: Product[]) {

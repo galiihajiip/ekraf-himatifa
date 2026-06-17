@@ -31,13 +31,7 @@ export async function getCategories(): Promise<Category[]> {
   return data ?? [];
 }
 
-export async function getCatalogProducts(
-  category?: string
-): Promise<Product[]> {
-  if (isDemoModeEnabled()) {
-    return getDemoProducts(category);
-  }
-
+async function getSupabaseProducts(category?: string): Promise<Product[]> {
   const supabase = createClient();
 
   let query = supabase
@@ -59,6 +53,22 @@ export async function getCatalogProducts(
   return data ?? [];
 }
 
+export async function getCatalogProducts(
+  category?: string
+): Promise<Product[]> {
+  if (isDemoModeEnabled()) {
+    return getDemoProducts(category);
+  }
+
+  const supabaseProducts = await getSupabaseProducts(category);
+  if (supabaseProducts.length > 0) {
+    return supabaseProducts;
+  }
+
+  // Showcase fallback when Supabase is empty/unavailable (e.g. Vercel deploy)
+  return getDemoProducts(category);
+}
+
 export async function getCatalogProductById(
   id: string
 ): Promise<Product | null> {
@@ -73,10 +83,13 @@ export async function getCatalogProductById(
     .eq("id", id)
     .single();
 
-  if (error) {
-    console.error("Error fetching product:", error.message);
-    return null;
+  if (!error && data) {
+    return data;
   }
 
-  return data;
+  if (error) {
+    console.error("Error fetching product:", error.message);
+  }
+
+  return getDemoProductById(id);
 }
