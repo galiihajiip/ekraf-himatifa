@@ -3,6 +3,7 @@
  *
  * Protects all /admin/* routes (except /admin/login).
  * Uses Supabase server client to verify active session via cookies.
+ * Demo mode uses a separate cookie when DEMO_MODE=true.
  *
  * - No session + accessing /admin/* → redirect to /admin/login
  * - Active session + accessing /admin/login → redirect to /admin/dashboard
@@ -11,12 +12,36 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 import { createServerClient } from "@supabase/ssr";
+import {
+  DEMO_SESSION_COOKIE,
+  isDemoModeEnabled,
+} from "@/lib/demo/constants";
+
+function hasDemoSession(request: NextRequest) {
+  return (
+    isDemoModeEnabled() &&
+    request.cookies.get(DEMO_SESSION_COOKIE)?.value === "1"
+  );
+}
 
 export async function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   // Only run on /admin routes
   if (!pathname.startsWith("/admin")) {
+    return NextResponse.next();
+  }
+
+  const isLoginPage = pathname === "/admin/login";
+  const demoAuthenticated = hasDemoSession(request);
+
+  if (demoAuthenticated) {
+    if (isLoginPage) {
+      const url = request.nextUrl.clone();
+      url.pathname = "/admin/dashboard";
+      return NextResponse.redirect(url);
+    }
+
     return NextResponse.next();
   }
 
@@ -48,8 +73,6 @@ export async function middleware(request: NextRequest) {
   const {
     data: { user },
   } = await supabase.auth.getUser();
-
-  const isLoginPage = pathname === "/admin/login";
 
   // If user is logged in and on login page, redirect to dashboard
   if (user && isLoginPage) {

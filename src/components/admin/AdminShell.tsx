@@ -13,6 +13,9 @@ import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import { LayoutDashboard, Package, LogOut, Menu, X } from "lucide-react";
 import { createClient } from "@/lib/supabase/client";
+import { logoutDemo } from "@/lib/demo/auth";
+
+const demoModeEnabled = process.env.NEXT_PUBLIC_DEMO_MODE === "true";
 
 const sidebarLinks = [
   { href: "/admin/dashboard", label: "Dashboard", icon: LayoutDashboard },
@@ -29,6 +32,18 @@ export default function AdminShell({ children }: { children: ReactNode }) {
   const isLoginPage = pathname === "/admin/login";
 
   useEffect(() => {
+    if (demoModeEnabled) {
+      const demoEmail = document.cookie
+        .split("; ")
+        .find((row) => row.startsWith("ekraf_demo_email="))
+        ?.split("=")[1];
+
+      if (demoEmail) {
+        setUserEmail(decodeURIComponent(demoEmail));
+        return;
+      }
+    }
+
     const supabase = createClient();
     supabase.auth.getUser().then(({ data: { user } }) => {
       if (user) {
@@ -38,6 +53,13 @@ export default function AdminShell({ children }: { children: ReactNode }) {
   }, []);
 
   const handleLogout = async () => {
+    if (demoModeEnabled) {
+      await logoutDemo();
+      router.push("/admin/login");
+      router.refresh();
+      return;
+    }
+
     const supabase = createClient();
     await supabase.auth.signOut();
     router.push("/admin/login");
